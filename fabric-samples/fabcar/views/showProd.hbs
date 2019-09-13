@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Products</h2>
+
+{{#each Result}}
+<form method="get" action="/category/{{this.Record.ProductCategory}}">
+    <div class="card">
+        <h1>{{this.Record.ProductName}}</h1>
+        <p class="price">{{this.Record.Price}} Taka</p>
+        <p>{{this.Record.ProductDescription}}</p>
+        <p>Status: {{this.Record.SellStatus}}</p>
+        <p> <a href="/profile/{{this.Record.OwnerID}}"> Seller</a></p>
+        <p><button button name="buy" value="ShowDetail" type="submit" class="button" >Show Detail</button></p>
+    </div>
+</form>
+{{/each}}
+
+</body>
+</html>

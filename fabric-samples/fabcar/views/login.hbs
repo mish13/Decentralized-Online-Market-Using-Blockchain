@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="login">
+  <form method="post" action="/login">
+  	<div class="loginBox" style="height: 68%; top: 60%; margin-top: 5%">
+      <img src="user.png" class="user">
+      <h2>Login</h2>
+        <p>Email</p>
+        <input type="text" name="email" >
+        <p>Password</p>
+        <input type="password" name="password" >
+        <input type="submit" name="login_user" value="Sign In">
+        <p>
+          Not yet a member? <a href="/register">Sign up</a>
+        </p>
+      </form>
+    </div>
+
+    <!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/bootstrap/js/popper.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/tilt/tilt.jquery.min.js"></script>
+        <script >
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-23581568-13');
+    </script>
+    
+    <!--===============================================================================================-->
+        <script src="js/main.js"></script>
+    
+</body>
+</html>

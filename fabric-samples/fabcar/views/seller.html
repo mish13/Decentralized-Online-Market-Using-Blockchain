@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title> profile</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="js/demo.js"></script>
+
+
+</head>
+<body class="profile" >
+	<br><br><br><br><br>
+	<div class="img-profile">
+	<div class= "profile-pic extra-margin" align="center">
+	</div>
+	<div class= "profile-name" align="center">
+		<h2 style="color: #555555;">
+			{{Result.FirstName}} {{this.record.LastName}}
+		</h2>
+	</div>
+	<!--<div class= "profile-job" align="center">
+		<h3>
+		</h3>
+		<div style="margin: 0 0 0 -60px;">
+				<form method="post" style="display: inline-block;">
+					<input  type="submit" class="btn btn-success btn-sm" value="nothing" name="ufollow"  style="margin-left: 54px; margin-bottom: 15px;">
+				</form>	
+		</div>
+	</div>-->
+	<hr>
+	<!-- <div class="profile-button" align="center">
+		<button class= "btn btn-success btn-sm">Follow</button>
+	</div> -->
+	<!--<div class="about sidebar">
+		<h3>
+			<i class="glyphicon glyphicon-user">About</i>
+		</h3>
+		<h4>
+			{{FirstName}} {{LastName}}
+		<h4>
+	</div>
+	<hr>-->
+	<div class="address sidebar">
+		<h3>
+			<i class="glyphicon glyphicon-home">Address</i>
+		</h3>
+		<h4>
+			{{this.Record.Address}}
+	</h4>
+	</div>
+	<hr>
+	<div class="contact_no sidebar" style="margin-bottom: 15px;">
+	<h3>
+			<i class="glyphicon glyphicon-flag">Contact-no.</i>
+		</h3>
+		<h4>
+			{{this.Record.ContactNo}}
+		</h4>
+	</div>
+	<hr>
+	<div class="email sidebar" style="margin-bottom: 15px;">
+	<h3>
+			<i class="glyphicon glyphicon-envelope">Email</i>
+		</h3>
+		<h4>
+			{{this.Record.Email}}
+		</h4>
+	</div>
+	<hr>
+
+		<button  type="button" class="btn btn-success btn-sm" name="editprofile" onclick ="location.href='/updateProfile'" 
+					style="margin-left: 54px; margin-bottom: 15px;">Edit Profile
+		</button>
+</div>
+
+</body>
+
+</html>

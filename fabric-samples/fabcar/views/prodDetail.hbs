@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{pageTitle}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Product Details</h2>
+
+{{#each Result}}
+	<form action="/category/{{this.Record.ProductCategory}}/{{this.Record.ProductID}}/buy" method="post">
+		<div class="card">
+            <img src={{this.Record.PicturePath}} style="width:100%">
+            <h1>{{this.Record.ProductName}}</h1>
+            <p class="price">{{this.Record.Price}} Taka</p>
+            <p>{{this.Record.ProductDescription}}</p>
+            <p>Status: {{this.Record.SellStatus}}</p>
+            <p> <a href="/profile/{{this.Record.OwnerID}}"> Seller</a></p>
+            <p><button name="buy" value="Buy" type="submit" class="button" onclick="myFunction()">Buy</button></p>
+		</div>
+        <script>
+					function myFunction() {
+						alert("Product is bought");
+					}
+				</script>
+	</form>
+{{/each}}
+
+</body>
+</html>

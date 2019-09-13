@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>register</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="register">
+
+	<form method="post" action="/register" enctype="multipart/form-data">
+
+		<div class="loginBox" style="top: 75%; height: 115%; margin-top: 3%; margin-bottom: 3%">
+			<img src="user.png" class="user">
+			<h2>Register</h2>
+			<!--<form method="post" action="/register" enctype="multipart/form-data">-->
+				<p>First Name</p>
+				<input type="text" name="firstName" >
+				<p>Last Name</p>
+				<input type="text" name="lastName" >
+				<p>Address</p>
+				<input type="text" name="address" >
+				<p>Contact Number</p>
+				<input type="text" name="contactNo" >
+				<p>Email</p>
+				<input type="text" name="email" >
+				<p>Password</p>
+				<input type="password" name="password" ><br>
+				<p>Choose Profile Picture</p>
+				<input type="file" name="uploadPicture">
+				<input type="submit" name="reg_user" value="Register">
+				<p>
+					Already a member? <a href="/login">Sign in</a>
+				</p>
+        </div>
+	</form>
+        
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

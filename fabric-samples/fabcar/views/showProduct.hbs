@@ -1,0 +1,138 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>register</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="register">
+	{{ResponseData}}
+
+	{{#each Result}}
+		<li> <a href="/category/{{this.Record.ProductCategory}}/{{this.Record.ProductID}}">{{this.Record.ProductName}}</a> </li><br>
+	{{/each}}
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{pageTitle}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+    <!--<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><strong>Online</strong> Shop</a>
+					</div>
+		
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/sell">Upload</a></li>
+							<li><a href="/category">Categories</a></li>
+							<li><a href="/register">Register</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="/logout">Logout</a></li>
+		
+							
+						</ul>
+					   
+					</div>
+					
+				</div>
+			</nav>-->
+<h2 style="text-align:center">Products{{Result.Record.ProductCategory}}</h2>
+{{#each Result}}
+<div class="columns">
+  <ul class="price">
+    <li class="header">{{this.Record.ProductName}}</li>
+    <li class="grey">{{this.Record.Price}} Taka</li>
+    <li class="grey"><a href="/category/{{this.Record.ProductCategory}}/{{this.Record.ProductID}}" class="button">Show Detail</a></li>
+  </ul>
+</div>
+{{/each}}
+
+</body>
+</html>
+
